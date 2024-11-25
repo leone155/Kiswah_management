@@ -1,0 +1,237 @@
+/* General page styling */
+.storage-page {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  color: #333;
+}
+
+/* Title and icon styling */
+.storage-icon {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.storage-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #32a852;
+}
+
+/* Cards styling */
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+  padding: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card.active-card {
+  border-color: #32a852;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-icon {
+  margin-bottom: 10px;
+}
+
+.card-content h3 {
+  font-size: 18px;
+  color: #333;
+}
+
+.card-content p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #666;
+}
+
+.filter-button {
+  background-color: white;
+  border: 2px solid #32a852;
+  color: #32a852;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.filter-button.active,
+.filter-button:hover {
+  background-color: #32a852;
+  color: white;
+}
+
+/* Tables */
+.table-wrapper {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.storages-table,
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.storages-table th,
+.orders-table th,
+.storages-table td,
+.orders-table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.storages-table th,
+.orders-table th {
+  background-color: #32a852;
+  color: white;
+}
+
+.storages-table tr:nth-child(even),
+.orders-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.storages-table tr:hover,
+.orders-table tr:hover {
+  background-color: #e8f5e9;
+}
+
+.orders-table td button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #32a852;
+  color: white;
+  cursor: pointer;
+}
+
+.orders-table td button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.toggle-status-button {
+  background-color: #32a852;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.toggle-status-button:hover {
+  background-color: #248f3d;
+}
+
+/* Modal styling */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content.scrollable {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+/* Confirm Modal */
+.confirm-modal .modal-content {
+  max-width: 300px;
+}
+
+.confirm-button,
+.cancel-button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.confirm-button {
+  background-color: #32a852;
+  color: white;
+}
+
+.cancel-button {
+  background-color: #ccc;
+  color: white;
+}
+
+/* Spinner */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #32a852;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.fulfill-orders-button-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.fulfill-orders-button {
+  background-color: #32a852;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.fulfill-orders-button:hover {
+  background-color: #248f3d;
+}
+
